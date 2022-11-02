@@ -69,7 +69,7 @@ export const deleteUser = async (username)=>{
     }
 }
 
-export const loginUser = async (username, password)=>{
+export const loginUser = async (username, password, setter)=>{
     try{
         const response = await fetch("http://localhost:5001/loginUser",{
             method: "POST",
@@ -81,6 +81,7 @@ export const loginUser = async (username, password)=>{
         })
         const data = await response.json()
         console.log(data)
+        setter(data.username)
     } catch (error){
         console.log(error)
     }

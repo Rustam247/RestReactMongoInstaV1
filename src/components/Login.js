@@ -2,14 +2,14 @@ import React from "react";
 import { useState } from "react";
 import { loginUser } from "../utils";
 
-const Login = () =>{
+const Login = ({setter}) =>{
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
 
 
     const loginHadler = async (event) =>{
         event.preventDefault()
-        await loginUser(username, password)
+        await loginUser(username, password, setter)
     }
     return (
         <form onSubmit={loginHadler}>
