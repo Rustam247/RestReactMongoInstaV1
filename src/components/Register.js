@@ -30,7 +30,7 @@ const Register = ({setter}) => {
             </label>
             <br/>
             <br/>
-            <button type="submit">Click here to login</button>
+            <button type="submit">Click here to Register</button>
         </form>
     )
 }

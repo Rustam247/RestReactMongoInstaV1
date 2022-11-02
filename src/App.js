@@ -5,6 +5,7 @@ import {useState} from "react"
 import ReadUsers from './components/ReadUsers';
 import UpdateUsers from "./components/UpdateUsers"
 import DeleteUser from './components/DeleteUser';
+import Login from "./components/Login"
 
 function App() {
   const [user, setUser] = useState()
@@ -27,6 +28,8 @@ function App() {
       <UpdateUsers/>
       <h2>Delete User</h2>
       <DeleteUser/>
+      <h2>Login User</h2>
+      <Login/>
     </div>
   );
 }
