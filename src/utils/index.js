@@ -81,7 +81,7 @@ export const loginUser = async (username, password, setter)=>{
         })
         const data = await response.json()
         console.log(data)
-        setter(data.username)
+        setter(data.user)
     } catch (error){
         console.log(error)
     }

@@ -8,17 +8,17 @@ const Registeration = () => {
     const [user, setUser] = useState()
 
     return(
-        <div>
-            <h1>Register Page</h1>
+        <div id="page-login">
+            <h1 id="title1">Register Page</h1>
             <Register setter={setUser}/>
 
             {user ?
             <div>
-                <h2>Hello Welcome {user}</h2>
+                <h2 id="title1">Hello Welcome {user}</h2>
                 <ReadUsers/>
             </div> 
                 :
-                <h2>Please Register</h2>
+                <h2 id="title1">Please Register</h2>
             }
         </div>
     );

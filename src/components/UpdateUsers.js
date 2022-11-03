@@ -19,7 +19,7 @@ const UpdateUsers = () => {
             <br/>
             <br/>
             <label>Key:
-                <input onChange={(event) => setKey(event.target.value)}/>
+            <input id="username" onChange={(event) => setKey(event.target.value)} />
             </label>
             <br/>
             <br/>

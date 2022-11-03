@@ -19,39 +19,25 @@ const Home = () => {
 
 
     return(
-        <div>
-            <h1>Home Page</h1>
-            <div>
-            {photo.map((item, index)=>{
-                return <div id="container">
-                    <div id="header"><p id="header-text">{item.author}</p></div>
-                    <img id="img" alt="Photo" src = {item.download_url} width={250} height={250}/>
+        <div id="page">
+            <h1 id="title1">Home Page</h1>
+            <div id="containers">
+                <div >
+                {photo.map((item, index)=>{
+                    return <div id="container-page">
+                        <div id="header"><p id="header-text">{item.author}</p></div>
+                        <img id="img" alt="Photo" src = {item.download_url} />
 
-                    <div id = "bottom-text">
-                        <div id = "link">
-                        <a target = "_blank" href = {item.url} id = "link">Open Full Image</a>
+                        <div id = "bottom-text">
+                            <div id = "link">
+                            <a target = "_blank" href = {item.url} id = "link">Open Full Image</a>
+                            </div>
+
+                            <div id="like">&#9745;</div>
                         </div>
-
-                        <div id="like">&#9745;</div>
                     </div>
+                })}
                 </div>
-            })}
-            </div>
-            <div>
-            {photo.map((item, index)=>{
-                return <div id="container">
-                    <div id="header"><p id="header-text">{item.author}</p></div>
-                    <img id="img" alt="Photo" src = {item.download_url} width={250} height={250}/>
-
-                    <div id = "bottom-text">
-                        <div id = "link">
-                        <a target = "_blank" href = {item.url} id = "link">Open Full Image</a>
-                        </div>
-
-                        <div id="like">&#9745;</div>
-                    </div>
-                </div>
-            })}
             </div>
         </div>
     );

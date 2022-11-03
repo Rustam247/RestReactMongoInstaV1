@@ -4,12 +4,12 @@ import DeleteUser from "../components/DeleteUser";
 
 const Edit = () => {
     return(
-        <div>
-            <h1>Edit</h1>
+        <div id="page-login">
+            <h1 id="title1">Edit</h1>
             <br/>
-            <h2>Change User name</h2>
+            <h2 id="title1">Change User name</h2>
             <UpdateUsers/>
-            <h2>Delete your account</h2>
+            <h2 id="title1">Delete your account</h2>
             <DeleteUser/>
         </div>
     );

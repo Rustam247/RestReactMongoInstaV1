@@ -13,13 +13,15 @@ const Header = () => {
     //     navigate("/")
     //   }
     return (
-        <div id = "navbar">
-            <p id = "title">Instagram</p>
+        <div id = "container">
             <BrowserRouter>
-                <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/logining">Logining</Link>
-                    <Link to="/registeration">Registeration</Link>
+                <nav id="nav-bar">
+                    <p id = "title">Instagram</p>
+                    <div id="links">
+                    <Link id="Linkto" to="/">Home</Link>
+                    <Link id="Linkto" to="/logining">Logining</Link>
+                    <Link id="Linkto" to="/registeration">Registeration</Link>
+                    </div>
                 </nav>
                 {/* <button onClick={clickHandler}>Send me home</button> */}
                 <Routes>
