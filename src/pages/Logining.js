@@ -1,10 +1,27 @@
 import React from "react";
-import Login from "../components/Login"
+import { useEffect } from 'react';
 import { useState } from "react";
+
+import Login from "../components/Login"
 import Edit from "./Edit"
+
+import { getCookie } from "../common";
+import {findUser} from "../utils"
 
 const Loging = () => {
     const [username, setUsername] = useState()
+
+    useEffect(() =>{
+        let cookie = getCookie("jwt_token")
+        if (cookie !== false){
+          loginWithToken(cookie)
+        }
+      }, [])
+    
+      const loginWithToken = async(cookie)=>{
+        const username = await findUser(cookie)
+        setUsername(username)
+    }
 
     return(
         <div id="page-login">
@@ -14,7 +31,7 @@ const Loging = () => {
             {username ?
             <div>
                 <h2 id="title1">Hello Welcome {username}</h2>
-                <Edit user={username}/>
+                <Edit username={username}/>
             </div> 
                 :
                 <h2 id="title1">Please Register</h2>
